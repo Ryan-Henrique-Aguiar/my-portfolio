@@ -1,6 +1,5 @@
 
 import { createTheme, responsiveFontSizes } from '@mui/material';
-import { green, purple } from '@mui/material/colors';
 import '@fontsource/roboto/200.css';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -13,10 +12,10 @@ let theme = createTheme({
   palette: {
     mode:'light',
     primary: {
-      main: '#ff6501',
+      main: '#1f1f1f',
     },
     secondary: {
-      main: green[500],
+      main:'#ff6501',
     },
   },
   typography:{
