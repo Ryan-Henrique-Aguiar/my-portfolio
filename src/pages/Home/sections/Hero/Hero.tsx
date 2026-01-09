@@ -1,10 +1,12 @@
 import { styled } from "@mui/material/styles";
 import Avatar from "../../../../assets/images/eu.jpeg";
-import {Container, Grid, Typography } from "@mui/material";
+import {Box, Container, Grid, Typography } from "@mui/material";
 import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import theme from "../../../../theme";
+import {AnimatedBackGroundClouds} from "../../../../components/animatedBackground/AnimatedBackgroundClouds";
+import { AnimatedBackground } from "../../../../components/animatedBackground/AnimatedBackground";
 
 
 const Hero = () =>{
@@ -12,8 +14,9 @@ const Hero = () =>{
     const StyledHero = styled("div")(({ theme }) => ({
         backgroundColor: theme.palette.primary.main,
         height: "100vh",
+        position:"relative",
         display:'flex',
-        alignItems:"center  "
+        alignItems:"center",
         }));
 
     const StyledImg = styled("img")({
@@ -26,12 +29,29 @@ const Hero = () =>{
         <>
             <StyledHero>
                 <Container maxWidth = 'lg'>
+                    <Box position={'relative'} alignItems={"center"}>
+                                <Box position={'absolute'} zIndex={0} width={'100%'} top={170} right={0} >
+                                    <AnimatedBackGroundClouds></AnimatedBackGroundClouds>
+                                </Box>
+                                
+                            </Box>
                     <Grid container spacing={2}>
+                        
                         <Grid size={{xs:12,md:5}} >
-                            <StyledImg src = {Avatar}></StyledImg>
+
+                            <Box position="relative" pb={3}>
+                                <Box width={"150%"} position="absolute" top={-100} right={0}>
+                                    <AnimatedBackground />
+                                </Box>
+                                <Box textAlign="center" position={'absolute'}>
+                                    <StyledImg src={Avatar} />
+                                </Box>
+                            </Box>
+                            
                             
                         </Grid>
-                        <Grid size={{xs:12,md:7}}>
+                        
+                        <Grid size={{xs:12,md:7}} position={"relative"}>
                             <Typography color="primary.contrastText" variant="h1" textAlign={"center"}>Ryan Henrique Aguiar</Typography>
                             <Typography color="primary"variant="h2" textAlign={"center"} >Estudante de Sistemas de Informação</Typography>
                             <Grid container display={'flex'} justifyContent={'center'} spacing={3}>
@@ -46,7 +66,7 @@ const Hero = () =>{
                                     
     
                                 </Grid>
-
+                                
                                 <Grid size={{xs:12, md:4}} display={'flex'} justifyContent={'center'}>
                                         <StyledButton>
                                             <EmailIcon/>
