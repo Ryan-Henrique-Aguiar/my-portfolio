@@ -43,7 +43,7 @@ const Hero = () =>{
                                 <Box width={"150%"} position="absolute" top={-100} right={0}>
                                     <AnimatedBackground />
                                 </Box>
-                                <Box textAlign="center" position={'absolute'}>
+                                <Box textAlign="center" position={'relative'}>
                                     <StyledImg src={Avatar} />
                                 </Box>
                             </Box>
