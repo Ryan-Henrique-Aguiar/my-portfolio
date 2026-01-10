@@ -35,7 +35,8 @@ let theme = createTheme({
       letterSpacing: '0.02em',
     },
     h2: {
-      fontWeight: 200,
+      fontWeight: 100,
+      fontSize:"45%"
     },
     
   }

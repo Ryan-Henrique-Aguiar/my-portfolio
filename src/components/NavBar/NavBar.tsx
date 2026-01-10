@@ -5,7 +5,7 @@ import { useState } from 'react'
 const App = () => {
   const [] = useState(0)
 
-  const Styledtoobar = styled(Toolbar)(({ theme }) => ({
+  const Styledtoobar = styled(Toolbar)(({}) => ({
         display:"flex",
         justifyContent:"space-evenly"
         }));
