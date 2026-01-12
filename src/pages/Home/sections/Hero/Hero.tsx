@@ -15,7 +15,8 @@ const Hero = () =>{
     
     const StyledHero = styled("div")(({ theme }) => ({
         backgroundColor: theme.palette.primary.main,
-        height: "100vh",
+        minHeight: "100vh",
+        height:'auto',
         position:"relative",
         display:'flex',
         alignItems:"center",
@@ -23,6 +24,10 @@ const Hero = () =>{
             paddingTop:"250px",
             
             
+        },
+        [theme.breakpoints.down('sm')]: {
+            paddingTop: "120px",
+            paddingBottom: "80px",
         },
         /**[theme.breakpoints.up('md')]:{ //>= Mobile
             
