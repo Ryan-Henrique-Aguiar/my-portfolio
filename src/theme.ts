@@ -38,6 +38,14 @@ let theme = createTheme({
       fontWeight: 100,
       fontSize:"45%"
     },
+    h3:{
+      fontWeight:300,
+      fontSize: "45%"
+    },
+    h4:{
+      fontWeight:150,
+      fontSize: "27%"
+    }
     
   }
 });
