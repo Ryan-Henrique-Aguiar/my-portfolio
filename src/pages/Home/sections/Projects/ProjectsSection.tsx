@@ -19,6 +19,25 @@ const ProjectsSection: React.FC = () => {
             websiteURL: "",
             codeURL: "https://github.com/Ryan-Henrique-Aguiar/probabilidade-chuva-api",
         },
+        {
+            title: "ImuneGestão",
+            subtitle: "2025",
+            srcImg: "/src/assets/images/project-imunegestao.jpg",
+            description: "Sistema de gestão para vacinção de pacientes, agendamento e notificação por email. (Projeto 2º lugar FaiTec 2025)",
+            technologies: "Technologies: Java, JavaFX, SceneBuilder, SpringBoot(Somente para notificação)",
+            websiteURL: "",
+            codeURL: "https://github.com/Ryan-Henrique-Aguiar/GestaoImune",
+        },
+        {
+            title: "Letrix",
+            subtitle: "2024",
+            srcImg: "/src/assets/images/project-letrix.jpg",
+            description: "Jogo de descoberta de palavras. (Projeto 2º lugar FaiTec 2024)",
+            technologies: "Technologies: Python, Pygame",
+            websiteURL: "",
+            codeURL: "https://github.com/Ryan-Henrique-Aguiar/Letrix",
+        },
+        
     ]
 
     return (
