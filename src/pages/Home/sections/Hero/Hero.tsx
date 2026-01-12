@@ -2,7 +2,7 @@ import { styled } from "@mui/material/styles";
 import Avatar from "../../../../assets/images/eu.jpeg";
 import {Box, Container, Grid, Typography } from "@mui/material";
 import DownloadIcon from '@mui/icons-material/Download';
-import EmailIcon from '@mui/icons-material/Email';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import theme from "../../../../theme";
 import {AnimatedBackGroundClouds} from "../../../../components/animatedBackground/AnimatedBackgroundClouds";
@@ -36,16 +36,23 @@ const Hero = () =>{
         border:`1px solid ${theme.palette.secondary.main}`
         });
 
-        const handleDownload = () => {
-            console.log("download")
+    const handleDownload = () => {
+        console.log("download")
 
-            const link = document.createElement('a')
-            link.href = CV
-            link.download = 'Curriculo - Ryan Henrique Aguiar.pdf'
-            document.body.appendChild(link)
-            link.click();
-            document.body.removeChild(link)
-        }
+        const link = document.createElement('a')
+        link.href = CV
+        link.download = 'Curriculo - Ryan Henrique Aguiar.pdf'
+        document.body.appendChild(link)
+        link.click();
+        document.body.removeChild(link)
+    }
+    const handleWhatsApp = () =>{
+        const phoneNumber =  '5535998270245';
+        const message = 'Hello ! I saw your profile'
+
+        const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappLink, '_blank');
+    }
 
     return(
         <>
@@ -90,8 +97,8 @@ const Hero = () =>{
                                 </Grid>
                                 
                                 <Grid size={{xs:12, md:4}} display={'flex'} justifyContent={'center'}>
-                                        <StyledButton onClick={() => console.log("Contact")}>
-                                            <EmailIcon/>
+                                        <StyledButton onClick={() => handleWhatsApp()}>
+                                            <WhatsAppIcon/>
                                             <Typography>
                                                 CONTACT ME
                                             </Typography>
