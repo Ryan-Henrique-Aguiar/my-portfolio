@@ -6,6 +6,9 @@ const ProjectsSection: React.FC = () => {
 
     const StyledExperience = styled("div")(({ theme }) => ({
         backgroundColor: theme.palette.primary.main,
+        marginTop: "-40px",
+        paddingTop:theme.spacing(6),
+        paddingBottom: theme.spacing(6),
 
     }));
 
