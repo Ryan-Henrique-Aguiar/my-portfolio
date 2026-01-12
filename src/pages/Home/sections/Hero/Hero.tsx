@@ -9,6 +9,7 @@ import {AnimatedBackGroundClouds} from "../../../../components/animatedBackgroun
 import { AnimatedBackground } from "../../../../components/animatedBackground/AnimatedBackground";
 
 
+
 const Hero = () =>{
     
     const StyledHero = styled("div")(({ theme }) => ({
@@ -17,6 +18,15 @@ const Hero = () =>{
         position:"relative",
         display:'flex',
         alignItems:"center",
+        [theme.breakpoints.up('xs')]:{ //<= Mobile
+            paddingTop:"250px",
+            
+            
+        },
+        [theme.breakpoints.up('md')]:{ //>= Mobile
+            
+        }
+
         }));
 
     const StyledImg = styled("img")({
@@ -56,7 +66,7 @@ const Hero = () =>{
                             <Typography color="primary.contrastText"variant="h2" textAlign={"center"} paddingBlock={3} >Estudante de Sistemas de Informação</Typography>
                             <Grid container display={'flex'} justifyContent={'center'} spacing={3}>
                                 <Grid size={{xs:12, md:4}} display={'flex'} justifyContent={'center'} >
-                                        <StyledButton>
+                                        <StyledButton onClick={()=> console.log("Download")}>
                                             <DownloadIcon/>
                                             <Typography>
                                                 DOWNLOAD CV
@@ -68,7 +78,7 @@ const Hero = () =>{
                                 </Grid>
                                 
                                 <Grid size={{xs:12, md:4}} display={'flex'} justifyContent={'center'}>
-                                        <StyledButton>
+                                        <StyledButton onClick={() => console.log("Contact")}>
                                             <EmailIcon/>
                                             <Typography>
                                                 CONTACT ME
