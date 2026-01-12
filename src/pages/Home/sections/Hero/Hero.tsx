@@ -7,6 +7,7 @@ import StyledButton from "../../../../components/StyledButton/StyledButton";
 import theme from "../../../../theme";
 import {AnimatedBackGroundClouds} from "../../../../components/animatedBackground/AnimatedBackgroundClouds";
 import { AnimatedBackground } from "../../../../components/animatedBackground/AnimatedBackground";
+import CV from "../../../../assets/pdfs/Curriculo - Ryan Henrique Aguiar.pdf"
 
 
 
@@ -23,9 +24,9 @@ const Hero = () =>{
             
             
         },
-        [theme.breakpoints.up('md')]:{ //>= Mobile
+        /**[theme.breakpoints.up('md')]:{ //>= Mobile
             
-        }
+        }**/
 
         }));
 
@@ -34,6 +35,17 @@ const Hero = () =>{
         borderRadius: "50%",
         border:`1px solid ${theme.palette.secondary.main}`
         });
+
+        const handleDownload = () => {
+            console.log("download")
+
+            const link = document.createElement('a')
+            link.href = CV
+            link.download = 'Curriculo - Ryan Henrique Aguiar.pdf'
+            document.body.appendChild(link)
+            link.click();
+            document.body.removeChild(link)
+        }
 
     return(
         <>
@@ -66,7 +78,7 @@ const Hero = () =>{
                             <Typography color="primary.contrastText"variant="h2" textAlign={"center"} paddingBlock={3} >Estudante de Sistemas de Informação</Typography>
                             <Grid container display={'flex'} justifyContent={'center'} spacing={3}>
                                 <Grid size={{xs:12, md:4}} display={'flex'} justifyContent={'center'} >
-                                        <StyledButton onClick={()=> console.log("Download")}>
+                                        <StyledButton onClick={()=> handleDownload()}>
                                             <DownloadIcon/>
                                             <Typography>
                                                 DOWNLOAD CV
