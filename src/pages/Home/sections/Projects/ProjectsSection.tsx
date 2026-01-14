@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Typography, styled } from "@mui/material";
 import ProjectCard, { type ProjectCardProps } from "../../../../components/ProjectCard/ProjectCard";
 import AnimationComponent from "../../../../components/AnimationComponent/AnimationComponent";
-import probabilidadeChuvaIMG from "../../../../assets/images/project-probabilidadechuva.jpg"
+import probabilidadeChuvaIMG from "../../../../assets/images/project-probabilidadedechuva.jpg"
 import imunegestaoIMG from "../../../../assets/images/project-imunegestao.jpg"
 import letrixIMG from "../../../../assets/images/project-letrix.jpg"
 
