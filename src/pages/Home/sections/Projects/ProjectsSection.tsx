@@ -19,7 +19,6 @@ const ProjectsSection: React.FC = () => {
             srcImg: "/src/assets/images/project-probabilidadechuva.JPG",
             description: "Sistema que processa arquivos CSV históricos fornecidos pelo Instituto Nacional de Meteorologia (INMET) calcula a média e distribuição binomial de todos os dados da cidade e retorna a probabilidade de um intervalo de dias e do ano inteiro",
             technologies: "Technologies: Java, TypeScript, React, SpringBoot, Recharts, Vite",
-            websiteURL: "",
             codeURL: "https://github.com/Ryan-Henrique-Aguiar/probabilidade-chuva-api",
         },
         {
@@ -28,7 +27,6 @@ const ProjectsSection: React.FC = () => {
             srcImg: "/src/assets/images/project-imunegestao.jpg",
             description: "Sistema de gestão para vacinção de pacientes, agendamento e notificação por email. (Projeto 2º lugar FaiTec 2025)",
             technologies: "Technologies: Java, JavaFX, SceneBuilder, SpringBoot(Somente para notificação)",
-            websiteURL: "",
             codeURL: "https://github.com/Ryan-Henrique-Aguiar/GestaoImune",
         },
         {
@@ -37,7 +35,6 @@ const ProjectsSection: React.FC = () => {
             srcImg: "/src/assets/images/project-letrix.jpg",
             description: "Jogo de descoberta de palavras. (Projeto 2º lugar FaiTec 2024)",
             technologies: "Technologies: Python, Pygame",
-            websiteURL: "",
             codeURL: "https://github.com/Ryan-Henrique-Aguiar/Letrix",
         },
         
@@ -59,7 +56,6 @@ const ProjectsSection: React.FC = () => {
                                     srcImg={project.srcImg}
                                     description={project.description}
                                     technologies={project.technologies}
-                                    websiteURL={project.websiteURL}
                                     codeURL={project.codeURL}
                                 />
                             </AnimationComponent>

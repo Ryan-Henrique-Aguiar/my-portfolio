@@ -7,7 +7,6 @@ export interface ProjectCardProps {
     srcImg: string;
     description: string
     technologies: string
-    websiteURL: string;
     codeURL: string;
 }
 
@@ -17,7 +16,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     srcImg,
     description,
     technologies,
-    websiteURL,
     codeURL
 }) => {
 
@@ -58,10 +56,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 {technologies}
             </Typography>
             <Grid container spacing={1} pt={2}>
-                <Grid size={{xs:6}}>
-                    <StyledButton onClick={() => console.log('websiteURl')}>View Project</StyledButton>
-                </Grid>
-                <Grid size={{xs:6}}>
+                <Grid size={{xs:12}}>
                     <StyledButton onClick={() => window.open(codeURL)}>View Code</StyledButton>
                 </Grid>
             </Grid>
