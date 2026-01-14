@@ -1,6 +1,9 @@
 import { Box, Container, Grid, Typography, styled } from "@mui/material";
 import ProjectCard, { type ProjectCardProps } from "../../../../components/ProjectCard/ProjectCard";
 import AnimationComponent from "../../../../components/AnimationComponent/AnimationComponent";
+import probabilidadeChuvaIMG from "../../../../assets/images/project-probabilidadechuva.jpg"
+import imunegestaoIMG from "../../../../assets/images/project-imunegestao.jpg"
+import letrixIMG from "../../../../assets/images/project-letrix.jpg"
 
 const ProjectsSection: React.FC = () => {
 
@@ -16,7 +19,7 @@ const ProjectsSection: React.FC = () => {
         {
             title: "Probabilidade de Chuva",
             subtitle: "Dez 2025",
-            srcImg: "/src/assets/images/project-probabilidadechuva.JPG",
+            srcImg: probabilidadeChuvaIMG,
             description: "Sistema que processa arquivos CSV históricos fornecidos pelo Instituto Nacional de Meteorologia (INMET) calcula a média e distribuição binomial de todos os dados da cidade e retorna a probabilidade de um intervalo de dias e do ano inteiro",
             technologies: "Technologies: Java, TypeScript, React, SpringBoot, Recharts, Vite",
             codeURL: "https://github.com/Ryan-Henrique-Aguiar/probabilidade-chuva-api",
@@ -24,7 +27,7 @@ const ProjectsSection: React.FC = () => {
         {
             title: "ImuneGestão",
             subtitle: "2025",
-            srcImg: "/src/assets/images/project-imunegestao.jpg",
+            srcImg: imunegestaoIMG,
             description: "Sistema de gestão para vacinção de pacientes, agendamento e notificação por email. (Projeto 2º lugar FaiTec 2025)",
             technologies: "Technologies: Java, JavaFX, SceneBuilder, SpringBoot(Somente para notificação)",
             codeURL: "https://github.com/Ryan-Henrique-Aguiar/GestaoImune",
@@ -32,7 +35,7 @@ const ProjectsSection: React.FC = () => {
         {
             title: "Letrix",
             subtitle: "2024",
-            srcImg: "/src/assets/images/project-letrix.jpg",
+            srcImg: letrixIMG,
             description: "Jogo de descoberta de palavras. (Projeto 2º lugar FaiTec 2024)",
             technologies: "Technologies: Python, Pygame",
             codeURL: "https://github.com/Ryan-Henrique-Aguiar/Letrix",
