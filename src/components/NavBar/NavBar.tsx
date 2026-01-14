@@ -1,23 +1,30 @@
 import { AppBar, MenuItem, styled, Toolbar } from '@mui/material'
-import { useState } from 'react'
 
 
-const App = () => {
-  const [] = useState(0)
+export default function NavBar(){
 
   const Styledtoobar = styled(Toolbar)(({}) => ({
         display:"flex",
         justifyContent:"space-evenly"
         }));
+  
+
+  const handleSmoothScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({behavior: "smooth"});
+      
+    }
+  }
 
   return (
     <>
       
       <AppBar position="absolute">
         <Styledtoobar>
-        <MenuItem>About</MenuItem>
-        <MenuItem>Skills</MenuItem>
-        <MenuItem>Projects</MenuItem>
+        <MenuItem onClick={()=> handleSmoothScroll("about")}>About</MenuItem>
+        <MenuItem onClick={()=> handleSmoothScroll("skills")} >Skills</MenuItem>
+        <MenuItem onClick={()=> handleSmoothScroll("projects")}>Projects</MenuItem>
         </Styledtoobar>
       </AppBar>
       
@@ -25,4 +32,3 @@ const App = () => {
   )
 }
 
-export default App
